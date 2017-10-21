@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>jQwery Form WORK</title>
+    <!--===FONTS===-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="header-content text-right">
+            <p>Уже есть аккаунт ?</p>            
+            <a class="header-btn" href="#">Войти</a>            
+          </div>
+        </div>
+      </div>
+    </div>
+     <section>
+      <div class="container-fluid">
+        <div class="main-content">
+          <div class="form-img">
+            <div class="form-logo text-center">
+              <img src="img/form-logo.png" alt="Логотип">
+            </div>
+            <div class="form-text text-center">
+              Mysite              
+            </div>
+          </div>
+          <form id="form" action="#">
+            <input type="hidden" name="whatever" value="Главная форма">
+            <input class="form-control" id="input-name" name="username" placeholder="Имя пользователя" type="text"><br>
+            <input class="form-control" id="input-email" name="email" placeholder="Email" type="email"> <br>
+            <input class="form-control" id="input-password" name="password" placeholder="Пароль" type="password"><br>
+            <button class="btn form-btn" type="submit">Региcтрация</button>        
+          </form>
+        </div>
+          <div class="row">
+            <div class="footer-content">
+             <div class="left-content col-md-6">
+                 <a href="#">Блог</a>
+                 <span></span>
+                 <a href="#">Связаться с нами</a>
+             </div>                
+              <div class="footer-logo col-md-5">
+                <div class="img text-right">
+                  <img src="img/mysite-icon.png" alt="">
+
+                </div>
+
+              </div>
+
+            </div>
+            
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+        <div class="modal fade" id="modal-thanks" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">                
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4>От души братан</h4>                
+              </div>
+              <div class="modal-body">
+                 <p>Готовься к спаму</p>               
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">закрыть тут</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    
+    <script>
+    $('#form').validate({
+      rules: {
+          name: {
+            required: true,
+            minlength: 2
+          },
+          email: {
+            required: true,
+            minlength: 3,
+            email: true
+          }
+      },
+      messages: {
+        name: {
+          required: 'Это поле обязательно для заполнения',
+          minlength: 'Не менее 2 символов'
+        },
+        email: {
+          required: 'Это поле обязательно для заполнения',
+          minlength: 'Не менее 3 символов',
+          email: 'Введите корректный e-mail'
+        }
+      }
+    });
+    </script>
+  
+   <script>
+     $(document).ready(function(){
+        $("#form").submit(function() { 
+         $.ajax({
+           type: "POST", 
+           url: "mail.php",
+           data: $(this).serialize()
+         }).done(function() {
+                $(this).find("input").val(""); 
+                alert('Спасибо за заявку');
+                $("#form").trigger('reset');
+         });
+         return false;
+       });
+   });    
+   </script>
+    
+  </body>
+</html>
