@@ -1,0 +1,166 @@
+body {
+	font-family: Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+.clearfix:after {
+	content: '';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+.logo { 
+width: 180px;
+margin-top: 14px;
+}
+div {
+	box-sizing: border-box;
+}
+header {
+	background: url(../img/bck/bg1.jpg) no-repeat center top / cover; 
+	height: 100vh;
+
+}
+.container	{
+	width: 930px;
+	margin: 0 auto;
+}
+nav {
+	float: right;
+	margin-top: 50px;
+}
+.menu {
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+.menu li {
+	float: left;
+	display: block;
+	margin-right: 41px; 
+	font-size: 14px;
+}
+.menu li a {
+	color: #000300;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px black;
+}
+.titles-first {
+	font-size: 40px;
+	color: #C0D1E0;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 50px;
+	text-shadow: 1px 1px 2px black;
+}
+h1 {
+	font-size: 75px;
+	color: #C0D1E0;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 15px;
+	text-shadow: 1px 2px 2px black;
+}
+.button {
+	background: #EAB93C;
+	border: 1px solid #000;
+	color: #000000;
+	border-radius: 3px;
+	display: block;
+	width: 200px;
+	padding: 15px 5px;
+	margin: 0 auto;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	margin-top: 50px;
+}
+.title {
+	padding-top: 50px;
+}
+.title h2 {
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	text-shadow: 1px 1px 2px black;
+}
+.title p {
+	color: #000;
+	text-align: center;
+	font-size: 16px;
+	margin-top:5;
+	text-shadow: 1px 1px 2px black;
+}
+.works1 img {
+	float: left;
+	margin-top: 30px;
+}
+.works1 p {
+	float: center;
+	text-align: center;
+	font-size: 15px;
+	text-transform: uppercase;
+	line-height: 30px;
+	padding-top: 55px;
+}
+#portfolio {
+	margin-top: 20px;
+}
+.works2 img {
+	float: right;
+	margin-top: 30px;
+}
+.works2 p {
+	float: center;
+	text-align: center;
+	font-size: 15px;
+	text-transform: uppercase;
+	line-height: 30px;
+	padding-top: 35px;
+}
+.texton	{
+	padding-top: 20px;
+}
+.texton2 {
+	padding-top: 80px;
+}
+.works3 img {
+	float: left;
+	margin-top: 30px;
+}
+.works3 p {
+	float: center;
+	text-align: center;
+	font-size: 15px;
+	text-transform: uppercase;
+	line-height: 30px;
+	padding-top: 90px;
+}
+.advantage {
+margin-top: 50px;
+}
+.av {
+	width:270px;
+	float: left;
+	text-align: center;	
+}
+.av h3 {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+.av p {
+	color: #777777;
+	font-size: 14px;
+	line-height: 1.4em;
+}
+.av:last-child {
+	float: right;
+}
+.av:nth-child(2) {
+	margin-left: 60px;
+}
