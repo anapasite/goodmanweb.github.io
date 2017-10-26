@@ -1,0 +1,15 @@
+/*
+Theme Name: WP Bootstrap
+Theme URL: http://sukhorukov.net/
+Description: Демонстрационная тема, созданная благодаря Bootstrap </a>
+Author: Serj Goodman
+Author URL: http://goodman.io/
+Version: 1.0
+Tags: responsive, white, bootstrap
+License: Attribution-shreAlike 3.0 Unported(CC BY-SA 3.0)
+License URL: http://creativecommons.org/licenses/by-sa/3.0/
+Эта простая тема была создана на основе примера, найденного на сайте  фреймворка от команды разработки Twitter - Bootstrap.*/
+
+@import url('vendor/bootstrap/css/bootstrap.min.css');
+@import url('css/freelancer.min.css');
+@import url('vendor/font-awesome/css/font-awesome.min.css');
