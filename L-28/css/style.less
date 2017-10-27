@@ -1,0 +1,236 @@
+/*============    ШРИФТЫ    ===========*/
+@font-face {
+	font-family: 'Bliss Pro';
+	src: url('/fonts/BlissPro.eot');
+	src: url('/fonts/BlissPro.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/BlissPro.woff2') format('woff2'),
+		url('/fonts/BlissPro.woff') format('woff'),
+		url('/fonts/BlissPro.ttf') format('truetype'),
+		url('/fonts/BlissPro.svg#BlissPro') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bliss Pro';
+	src: url('/fonts/BlissPro-Medium.eot');
+	src: url('/fonts/BlissPro-Medium.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/BlissPro-Medium.woff2') format('woff2'),
+		url('/fonts/BlissPro-Medium.woff') format('woff'),
+		url('/fonts/BlissPro-Medium.ttf') format('truetype'),
+		url('/fonts/BlissPro-Medium.svg#BlissPro-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bliss Pro';
+	src: url('/fonts/BlissPro-ExtraLight.eot');
+	src: url('/fonts/BlissPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/BlissPro-ExtraLight.woff2') format('woff2'),
+		url('/fonts/BlissPro-ExtraLight.woff') format('woff'),
+		url('/fonts/BlissPro-ExtraLight.ttf') format('truetype'),
+		url('/fonts/BlissPro-ExtraLight.svg#BlissPro-ExtraLight') format('svg');
+	font-weight: 200;
+	font-style: normal;
+}
+
+.reg{
+	font-family: 'Bliss Pro', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+.med{
+	font-weight: 500;
+	font-style: normal;
+	font-family: 'Bliss Pro', sans-serif; 
+}
+.ex{
+	font-weight: 200;
+	font-style: normal;
+	font-family: 'Bliss Pro', sans-serif; 
+}
+/*===============card=================*/
+
+header{
+	background: url(../img/bg.jpg)no-repeat center center;
+	background-size: cover;
+	height: 100%;
+	.card{
+		height: 70rem;
+		width: 110rem;
+
+		background-color: #fff;
+		border-radius: 0.7rem;
+		margin: 8.2% auto;
+		.card_img{
+			margin: 0 auto;
+			img{
+				margin-top: 12%;
+				width: 50rem;
+			}
+		}
+
+		.card_descript{
+			margin: 0 auto;
+			padding-top:4rem;
+			h3{
+				font-size:3.5rem;
+				color: #333333;
+			}
+			h4{
+				font-size:2.5rem;
+				color:#5c5c5c;
+			}
+			.price{
+				color: #e3b431;
+				font-size: 6rem;
+			}
+			p{
+				margin-top: 4rem;
+				color:#5c5c5c;
+				font-size:2rem;
+				line-height: 2.5rem;
+				
+			}
+			.many{
+				line-height: 7rem;
+				height: 6rem;
+				margin-top: 4rem;
+				.minus{
+					margin: 0;
+					height: 5rem;
+					width: 5rem;
+					cursor: pointer;
+				}
+				.plus{
+					margin: 0;
+					height: 5rem;
+					width: 5rem;
+					cursor: pointer;
+				}
+				
+			}
+
+			button{
+				margin-top: 5rem;
+				background-color: rgb(244, 193, 59);
+				outline: none;
+				font-size:2rem;
+				padding: 1.2rem 3.5rem;
+				border-radius: 3rem;
+				border:none;				
+				color:white;
+				
+				box-shadow: 0px 0px 20px 0px rgba(0,0,0,.5);
+				&:hover{
+					color:#212121;
+					background-color: rgba(255,255,59,1);
+					a{
+						color: #212121;
+						text-decoration: none;
+					}
+				}
+				a{
+					color:white;
+				}
+			}	
+		}
+	}
+}
+/*====================stars==============*/
+#reviewStars-input input:checked ~ label, 
+#reviewStars-input label, 
+#reviewStars-input label:hover, 
+#reviewStars-input label:hover ~ label {
+  background: url('http://positivecrash.com/wp-content/uploads/ico-s71a7fdede6.png') no-repeat;
+}
+
+#reviewStars-input {
+  
+
+  overflow: hidden;
+  *zoom: 1;
+  
+  position: relative;
+  float: left;
+}
+
+#reviewStars-input input {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  
+  width: 43px;
+  height: 40px;
+  
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+#reviewStars-input input:checked ~ label {
+  background-position: 0 -40px;
+  height: 40px;
+  width: 43px;
+}
+
+#reviewStars-input label {
+  background-position: 0 0;
+  height: 40px;
+  width: 43px;
+  float: right;
+  cursor: pointer;
+  margin-right: 10px;
+  
+  position: relative;
+  z-index: 1;
+}
+
+#reviewStars-input label:hover, #reviewStars-input label:hover ~ label {
+  background-position: 0 -40px;
+  height: 40px;
+  width: 43px;
+}
+
+#reviewStars-input #star-0 {
+  left: 0px;
+}
+#reviewStars-input #star-1 {
+  left: 53px;
+}
+#reviewStars-input #star-2 {
+  left: 106px;
+}
+#reviewStars-input #star-3 {
+  left: 159px;
+}
+#reviewStars-input #star-4 {
+  left: 212px;
+}
+#reviewStars-input #star-5 {
+  left: 265px;
+}
+
+.item-1{
+	display: inline-block;
+	height: 6rem;
+}
+.item-2{
+	display: inline-block;
+	height: 6rem;
+}
+.item-3{
+	display: inline-block;
+	height: 6rem;
+}
+.score{
+margin:0px 1.5rem;
+font-size:3rem;
+}
+.close{
+	position: absolute;
+	right: 10%;
+	top: 13%;
+	color: #000;
+	opacity:0.8;
+}

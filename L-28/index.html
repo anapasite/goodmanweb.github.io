@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Give me All your money</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header>
+          <div class="container">
+            <div class="row">
+              <div class="card">
+                <a href="#" class="close-btn">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </a>
+                 
+                <div class="col-md-6">
+                  <div class="card_img">
+                    <img src="img/chair.png" alt="Стул">
+                  </div>     
+                </div>
+                <div class="col-md-6">
+                  <div class="card_descript">
+                    <h3 class="med">Стул “Венеция”</h3>
+                    <h4 class="reg">Ограниченный выпуск. </h4>
+                    <span class="price ex">4 250 р.  </span> <br>
+                    <div id="reviewStars-input">
+                        <input id="star-4" type="radio" name="reviewStars"/>
+                        <label title="gorgeous" for="star-4"></label>
+
+                        <input id="star-3" type="radio" name="reviewStars"/>
+                        <label title="good" for="star-3"></label>
+
+                        <input id="star-2" type="radio" name="reviewStars"/>
+                        <label title="regular" for="star-2"></label>
+
+                        <input id="star-1" type="radio" name="reviewStars"/>
+                        <label title="poor" for="star-1"></label>
+
+                        <input id="star-0" type="radio" name="reviewStars"/>
+                        <label title="bad" for="star-0"></label>
+                    </div>
+                    <p class="reg par">
+                      <br>Сайт рыбатекст поможет дизайнеру, <br> 
+                      верстальщику, вебмастеру сгенерировать <br> 
+                      несколько абзацев более менее осмысленного <br> 
+                      текста рыбы на русском языке, а начинающему <br> 
+                      оратору отточить навык публичных выступлений <br> 
+                      в домашних условиях. При создании генератора</p>
+                    <div class="many">
+                      <div class="item-1">
+                        <img src="img/minus.png" class="minus" alt="minus">
+                      </div>
+                      <div class="item-2">
+                        <span class="score ex">0</span>
+                      </div>
+                      <div class="item-3">
+                         <img src="img/plus.png" class="plus" alt="plus">
+                      </div>
+                    </div>
+                    <button class="med">
+                      <a href="https://glopart.ru/buy/180328">
+                        добавить в корзину
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header> 
+
+      <script src="js/jquery-3.2.1.min.js"></script>  
+
+      <script>
+        $(document).ready(function(){
+          var plus = $('.plus'),
+              minus = $('.minus'),
+              score = $('.score'),
+              score_val = 1;
+              
+
+          plus.on('click', function(){
+           var number = score.text(score_val);
+          
+            score_val=score_val+1;
+            console.log(score_val);
+          });    
+
+          minus.on('click', function(){
+        
+          
+          if (score_val <=2){
+            score_val=2;
+          };
+          score_val--;
+          var number = score.text(score_val-1);
+          });
+        });
+      </script>
+
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
